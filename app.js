@@ -18,6 +18,7 @@ okBtn.addEventListener('click',()=>{
 btn.addEventListener('click', randomImg);
 
 function randomImg(){
+    btn.style.display = 'none'
     audio.autoplay = true
     audio.src = 'img/wrong.mp3'
     main.classList.remove('mainLose')
@@ -30,6 +31,7 @@ function randomImg(){
     },100)
  
     setTimeout(()=>{
+        btn.style.display = 'inline'
         clearInterval(interval)
         if(image[0].src === image[1].src && image[1].src === image[2].src){
             win.innerHTML = 'congratulations'
