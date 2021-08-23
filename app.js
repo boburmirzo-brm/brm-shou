@@ -4,9 +4,16 @@ let audio = document.querySelector('#audio');
 let win = document.querySelector('.win');
 let main = document.querySelector('.main');
 let lose = document.querySelector('.lose');
+let okBtn = document.querySelector('.ok__btn');
+let alert = document.querySelector('.alert');
 let image = document.querySelectorAll('.image');
 
 let imgArrey = ['img/css.png', 'img/html.png', 'img/javascript.png', 'img/react.png']
+
+okBtn.addEventListener('click',()=>{
+    alert.style.transform = 'scale(0)'
+})
+
 
 btn.addEventListener('click', randomImg);
 
